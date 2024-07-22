@@ -1,5 +1,5 @@
 import "./App.css";
-import Layout from "./layout/layout";
+import Layout from "./layout/Layout";
 import { BrowserRouter } from "react-router-dom";
 import Login from "./pages/Login";
 import { useState,useEffect } from "react";
@@ -7,8 +7,6 @@ import { useState,useEffect } from "react";
 
 
 function App() {
-let baseAPIURL = import.meta.env.VITE_SOME_KEY;
-
  function checkAuthentication(){
     if(sessionStorage.getItem("auth_token")){
       return true;
