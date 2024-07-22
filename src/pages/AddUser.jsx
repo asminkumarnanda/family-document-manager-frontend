@@ -10,11 +10,11 @@ function AddUserDetail() {
     if (username!="" && password!="" && role!="") {
     let token=  sessionStorage.getItem("auth_token");
     
-    let response = await  fetch("http://127.0.0.1:8000/api/register",{ method: "POST",  headers: {
+    let response = await  fetch(`${import.meta.env.VITE_API_BASE_URL}/register`,{ method: "POST",  headers: {
      "Content-Type": "application/json",
      'Authorization': 'Bearer ' + token,
    },
-   body: JSON.stringify({
+   body: JSON.stringify({ 
      username: username,
      password: password,
      email: email,

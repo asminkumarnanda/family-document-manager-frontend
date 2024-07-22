@@ -5,7 +5,7 @@ import axios from "axios";
 import Table from "../components/Table";
 import Pagination from "../components/Pagination";
 
-const AdminMember = () => {
+const AdminMember = ({baseURL}) => {
 
     let [member, setMember] = useState('');
     let [theads, setTheads] = useState(['Sl.No.','User Name','Email','Action']);
@@ -20,7 +20,7 @@ const AdminMember = () => {
     let admin_id = sessionStorage.getItem("user_id");
     axios({
       method: "get",
-      url: `http://127.0.0.1:8000/api/users-list/${admin_id}`,
+      url: `${import.meta.env.VITE_API_BASE_URL}/users-list/${admin_id}`,
       headers: {
         "Content-Type": "application/json",
         Authorization: "Bearer " + token,

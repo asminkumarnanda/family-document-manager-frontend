@@ -5,6 +5,7 @@ import Footer from './footer'
 import AllRoutes from '../Routes/AllRoutes'
 
 const Layout = () => {
+
   return (
     
     <div>

@@ -14,7 +14,7 @@ const AddUserDetails = () => {
     const formData = new FormData(e.target);
     console.log(e);
    
-    fetch(`http://127.0.0.1:8000/api/insert-user-details/${userid}`, {
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/insert-user-details/${userid}`, {
       method: "POST",
       headers: {
         "Authorization": "Bearer " + token,

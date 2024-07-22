@@ -7,7 +7,7 @@ import { useState,useEffect } from "react";
 
 
 function App() {
-
+let baseAPIURL = import.meta.env.VITE_SOME_KEY;
 
  function checkAuthentication(){
     if(sessionStorage.getItem("auth_token")){
